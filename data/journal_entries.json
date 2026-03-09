@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "date": "Thursday 01 January 2026",
+    "text": "Quiet morning to start the year. Making a slow pour-over coffee and just watching the light change in the room. Feeling at peace.",
+    "primary_category": "Personal",
+    "intended_bias": "Zen"
+  },
+  {
+    "id": 2,
+    "date": "Saturday 03 January 2026",
+    "text": "Saw Alex across the quad today. I raised my hand halfway to wave, but they didn't look, so I pulled it back. Now I'm spiraling, wondering if they saw me and deliberately ignored me. Maybe I'm just too awkward.",
+    "primary_category": "Social",
+    "intended_bias": "Social Anxiety"
+  },
+  {
+    "id": 3,
+    "date": "Monday 05 January 2026",
+    "text": "Ran into Alex at the main library. We ended up sharing a table and studying in silence for a couple of hours. It was nice and productive.",
+    "primary_category": "School",
+    "intended_bias": "Neutral"
+  },
+  {
+    "id": 4,
+    "date": "Thursday 08 January 2026",
+    "text": "Just looked at the NLP syllabus. The final is worth 50%. I don't understand the prerequisites. I'm definitely going to fail this class, which means I'll lose my scholarship, and I'll probably have to drop out of college entirely.",
+    "primary_category": "School",
+    "intended_bias": "Catastrophizing"
+  },
+  {
+    "id": 5,
+    "date": "Saturday 10 January 2026",
+    "text": "Texted Alex to see if they wanted to grab lunch. It's been five hours with no reply. I must have said something wrong last time we hung out. They probably find me annoying and are just trying to ghost me politely.",
+    "primary_category": "Social",
+    "intended_bias": "Social Anxiety"
+  },
+  {
+    "id": 6,
+    "date": "Monday 12 January 2026",
+    "text": "Finally got the Rust compiler to stop yelling at me about lifetimes in that side project. There's a profound satisfaction in finally understanding the borrow checker.",
+    "primary_category": "Personal",
+    "intended_bias": "Zen"
+  },
+  {
+    "id": 7,
+    "date": "Thursday 15 January 2026",
+    "text": "Forgot my pencil case today. Borrowed a pen from Alex during the morning lecture so I could take notes. Returned it right after.",
+    "primary_category": "School",
+    "intended_bias": "Neutral"
+  },
+  {
+    "id": 8,
+    "date": "Saturday 17 January 2026",
+    "text": "Went to Sarah's get-together. Alex was there. Every time I joined a conversation they were in, it felt like they went quiet. I'm convinced my presence is making them uncomfortable. I should just stop going to these things.",
+    "primary_category": "Social",
+    "intended_bias": "Social Anxiety"
+  },
+  {
+    "id": 9,
+    "date": "Tuesday 20 January 2026",
+    "text": "Staring at the first NLP assignment and it looks like ancient Greek. If I can't even do assignment one, I'll never pass the final. My dreams of working in AI are officially over. I should just switch majors now before it gets worse.",
+    "primary_category": "School",
+    "intended_bias": "Catastrophizing"
+  },
+  {
+    "id": 10,
+    "date": "Thursday 22 January 2026",
+    "text": "Heavy rain today. I love the sound it makes against the dorm window. Just sitting here watching the drops race each other. A perfect afternoon for studying.",
+    "primary_category": "Personal",
+    "intended_bias": "Zen"
+  },
+  {
+    "id": 11,
+    "date": "Saturday 24 January 2026",
+    "text": "Made a joke in the group chat and Alex replied with a 'haha'. It felt incredibly forced. They're probably just pity-laughing so I don't feel bad. I shouldn't try to be funny, it always backfires.",
+    "primary_category": "Social",
+    "intended_bias": "Social Anxiety"
+  },
+  {
+    "id": 12,
+    "date": "Monday 26 January 2026",
+    "text": "Tried a new light roast from that local cafe down the street. Strong notes of blueberry and citrus. Really brightens up the morning routine.",
+    "primary_category": "Personal",
+    "intended_bias": "Zen"
+  },
+  {
+    "id": 13,
+    "date": "Wednesday 28 January 2026",
+    "text": "Professor announced the NLP midterm dates. I know absolutely nothing. I'm going to bomb this, my GPA will tank, and I'll never get a job. Why did I even take this course? I'm ruining my own life.",
+    "primary_category": "School",
+    "intended_bias": "Catastrophizing"
+  },
+  {
+    "id": 14,
+    "date": "Saturday 31 January 2026",
+    "text": "Been trying to draft a text to ask Alex if they want to study together this weekend, but I've rewritten it twenty times. I'm paralyzed. If they say no, it means they hate me. I can't handle the rejection right now.",
+    "primary_category": "Social",
+    "intended_bias": "Social Anxiety"
+  },
+  {
+    "id": 15,
+    "date": "Monday 02 February 2026",
+    "text": "Walked back to the dorms with Alex after our afternoon seminar. We just chatted about how crazy the weather has been lately. Pretty chill walk.",
+    "primary_category": "Social",
+    "intended_bias": "Neutral"
+  },
+  {
+    "id": 16,
+    "date": "Thursday 05 February 2026",
+    "text": "Trying to study for the NLP midterm but there are too many algorithms to memorize. It's mathematically impossible for me to learn this in time. I'm doomed. I'm going to get a zero and embarrass myself in front of everyone.",
+    "primary_category": "School",
+    "intended_bias": "Catastrophizing"
+  },
+  {
+    "id": 17,
+    "date": "Sunday 08 February 2026",
+    "text": "Spent the evening refactoring some old Rust code. Replacing messy loops with clean iterators. It's oddly therapeutic, just making things tidy and efficient.",
+    "primary_category": "Personal",
+    "intended_bias": "Zen"
+  },
+  {
+    "id": 18,
+    "date": "Tuesday 10 February 2026",
+    "text": "Crisp morning air today. Decided to walk the long way to campus through the park. The trees look beautiful bare. A good start to the day.",
+    "primary_category": "Personal",
+    "intended_bias": "Zen"
+  },
+  {
+    "id": 19,
+    "date": "Thursday 12 February 2026",
+    "text": "The NLP exam is in three days. I know exactly what's going to happen: I'm going to sit down, look at the paper, and my mind will go completely blank. I'll fail the class, disappoint my family, and end up with nothing.",
+    "primary_category": "School",
+    "intended_bias": "Catastrophizing"
+  },
+  {
+    "id": 20,
+    "date": "Sunday 15 February 2026",
+    "text": "Sitting by the window with a warm mug, watching the snow start to fall. Compiling a large project in the background. Everything feels very still and right.",
+    "primary_category": "Personal",
+    "intended_bias": "Zen"
+  }
+]
