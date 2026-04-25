@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.uv/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Tauri
+src-tauri/target/
+
+# App data — local-only, don't commit user content or model state
+backend/data/journal*.md
+backend/data/chroma/
+backend/data/graph/
+backend/data/personas/
+
+# OS
+.DS_Store

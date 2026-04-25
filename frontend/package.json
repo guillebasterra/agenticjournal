@@ -1,0 +1,11 @@
+{
+  "name": "frontend",
+  "private": true,
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "echo 'TODO: add frontend dev server'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
