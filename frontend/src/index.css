@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Span highlight palette — keyed by distortion label. */
+.dx-catastrophizing       { background: #fde2e4; }
+.dx-all_or_nothing        { background: #ffe7c2; }
+.dx-emotional_reasoning   { background: #fff1a8; }
+.dx-mind_reading          { background: #d8f3dc; }
+.dx-fortune_telling       { background: #cfe1f3; }
+.dx-personalization       { background: #e2d4f0; }
+.dx-should_statements     { background: #f5d6e8; }
+.dx-labeling              { background: #d4e5d4; }
+.dx-magnification_minimization { background: #f0e1d0; }
+.dx-mental_filter         { background: #d6e4ef; }
+.dx-disqualifying_positive { background: #ead4f0; }
+.dx-overgeneralization    { background: #f0d4d4; }
+
+mark.dx {
+  padding: 0 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+mark.dx.active {
+  outline: 2px solid #1c1917;
+}
