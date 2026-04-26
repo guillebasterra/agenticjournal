@@ -17,6 +17,8 @@ def health():
 
 
 # Routers are attached here as worktrees land them. Keep this file thin.
-# from api.ingest import router as ingest_router; app.include_router(ingest_router)
+from api.ingest import router as ingest_router  # noqa: E402
+
+app.include_router(ingest_router)
 # from api.detect import router as detect_router; app.include_router(detect_router)
 # from api.persona import router as persona_router; app.include_router(persona_router)
