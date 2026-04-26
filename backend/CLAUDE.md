@@ -62,9 +62,13 @@ Phase 2 adds:
 
 ## Current state
 
-- `main.py` is a hello-world stub. Not yet wired to FastAPI.
-- `ingest_journal.py` at the backend root is a primitive `re.split` over `### ` headings. It's a starting point — move it under `ingest/` and replace the regex with a real markdown parser when the ingestion worktree lands.
-- No graph store, no Chroma, no detector, no API routes yet.
+- `main.py` exposes `/health`, `/ingest`, `/detect`.
+- `ingest/` and `graph/` parse a markdown journal into a JSONL-backed `MultiDiGraph`.
+- `rag/distortions/` seeds and queries a Chroma collection of labeled CBT examples.
+- `retrieval/orchestrator.py::build_context(entry_id)` fuses graph neighborhood + global Chroma hits into a `RetrievalContext`.
+- `detector/` calls Ollama (`deepseek-r1:32b` by default; override with `OLLAMA_DETECTOR_MODEL`) and stream-parses sentinel-bracketed JSON findings.
+- `api/detect.py` exposes `POST /detect` as SSE — one `data:` frame per `DistortionFinding`, terminated by `event: done`.
+- `tests/integration_detect.py` runs `ingest -> detect` end-to-end on `data/sample_journal.md` and prints findings (`uv run python -m tests.integration_detect`).
 
 ## What "done" looks like for phase 1
 
