@@ -1,0 +1,63 @@
+[
+  {
+    "label": "fortune_telling",
+    "span": {
+      "start": 789,
+      "end": 848
+    },
+    "quote": "soon I will be revealed to be an incompetent and inept fool",
+    "rationale": "Predicts a specific negative future outcome with no supporting evidence — a textbook fortune-telling pattern.",
+    "evidence_global": [
+      "dx-001",
+      "dx-014"
+    ],
+    "evidence_personal": [
+      "entry-2025-09-11-software-engineering"
+    ],
+    "confidence": 0.82
+  },
+  {
+    "label": "labeling",
+    "span": {
+      "start": 819,
+      "end": 848
+    },
+    "quote": "an incompetent and inept fool",
+    "rationale": "Attaches a global identity label (\"fool\") to the self based on a single anticipated event rather than describing a behavior.",
+    "evidence_global": [
+      "dx-022"
+    ],
+    "evidence_personal": [],
+    "confidence": 0.74
+  },
+  {
+    "label": "emotional_reasoning",
+    "span": {
+      "start": 361,
+      "end": 401
+    },
+    "quote": "I feel like perhaps I am wasting my time",
+    "rationale": "Treats a transient feeling (boredom, fatigue) as evidence about an objective question (whether the time is well spent).",
+    "evidence_global": [
+      "dx-031"
+    ],
+    "evidence_personal": [
+      "entry-2025-09-15-vertigo"
+    ],
+    "confidence": 0.68
+  },
+  {
+    "label": "magnification_minimization",
+    "span": {
+      "start": 695,
+      "end": 720
+    },
+    "quote": "I am approaching it wrong",
+    "rationale": "Magnifies methodological uncertainty into total wrongness while minimizing the value of work already done.",
+    "evidence_global": [
+      "dx-008"
+    ],
+    "evidence_personal": [],
+    "confidence": 0.55
+  }
+]
