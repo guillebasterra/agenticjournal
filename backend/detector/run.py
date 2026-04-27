@@ -36,7 +36,7 @@ from .prompts import FINDINGS_CLOSE, FINDINGS_OPEN, build_messages
 
 log = logging.getLogger(__name__)
 
-DEFAULT_MODEL = os.environ.get("OLLAMA_DETECTOR_MODEL", os.environ.get("OLLAMA_MODEL", "deepseek-r1:32b"))
+DEFAULT_MODEL = os.environ.get("OLLAMA_DETECTOR_MODEL", os.environ.get("OLLAMA_MODEL", "qwen2.5:7b-instruct"))
 DEFAULT_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
 
 
