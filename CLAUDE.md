@@ -42,7 +42,7 @@ If a change couples persona logic to detection logic, stop and refactor — they
 
 - **Backend:** Python 3.13 + FastAPI, managed with `uv`. Lives in `backend/`.
 - **Frontend:** Tauri (Rust shell + web frontend). Lives in `frontend/`. Currently unscaffolded.
-- **LLM:** Ollama running `deepseek-r1:32b` locally. No cloud LLM in the runtime path — privacy is a hard requirement.
+- **LLM:** Ollama running `qwen2.5:7b-instruct` locally by default (chosen for fast first-token + reliable JSON output on Apple-silicon laptops). `deepseek-r1:32b` is supported as a quality-over-speed override via `OLLAMA_DETECTOR_MODEL`. No cloud LLM in the runtime path — privacy is a hard requirement.
 - **Knowledge graph:** LangChain + GraphRAG primitives over journal entries.
 - **Vector store:** ChromaDB. Two collections — `distortions` (labeled examples) and later `personas` (per-persona corpus chunks).
 
@@ -50,7 +50,16 @@ No formal evaluation harness, no LLM-as-judge, no synthetic-data generation. Ite
 
 ## Running locally
 
-From the workspace root:
+One-time setup (required before `/detect` will produce real findings):
+
+```bash
+ollama pull qwen2.5:7b-instruct                     # ~4.7 GB, default detector model
+cd backend && uv run python -m rag.distortions.seed # build the global Chroma collection
+```
+
+For higher-quality (but much slower) findings you can swap in a larger reasoning model — e.g. `ollama pull deepseek-r1:32b` and start the backend with `OLLAMA_DETECTOR_MODEL=deepseek-r1:32b`. On a 32B reasoning model expect 30–90 s per entry; on the 7B default expect ~5–10 s.
+
+Then, from the workspace root:
 
 ```bash
 npx -y concurrently -k -n "backend,frontend" -c "blue,green" \

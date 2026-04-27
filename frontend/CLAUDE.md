@@ -81,6 +81,8 @@ frontend/
 
 Single module: `src/api/client.ts`. All HTTP from the renderer goes through it. `detectStream` consumes SSE — one `data:` frame = one `DistortionFinding` (mirroring `backend/schemas.py::DistortionFinding`). `event: done` (or stream close) ends the stream.
 
+The backend may also emit `event: error` with `data: {"error": "..."}` if the detector fails (e.g. Ollama model not pulled). The client surfaces these via `handlers.onError` rather than treating the payload as a finding — do not parse error frames as `DistortionFinding`, since the resulting `undefined` fields will crash render paths like `FindingCard`.
+
 ## Cross-worktree contract
 
 Schema mirrors live in `.context/schemas/`:

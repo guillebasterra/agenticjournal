@@ -2,7 +2,7 @@
 
 Python 3.13, managed with `uv`. FastAPI + uvicorn. Hosts the ingestion pipeline, the personal knowledge graph, ChromaDB-backed retrieval, the distortion detector, and (phase 2) the persona-grounded analyzer.
 
-The runtime LLM is **local Ollama (`deepseek-r1:32b`)**. There is no cloud LLM anywhere in this backend, period. No evaluation harness, no LLM-as-judge, no synthetic data tooling.
+The runtime LLM is **local Ollama**. The default detector model is `qwen2.5:7b-instruct` (~4.7 GB, ~5–10 s per entry on Apple-silicon laptops, reliable JSON output). `deepseek-r1:32b` is supported as a quality-over-speed override via `OLLAMA_DETECTOR_MODEL` but is much slower because of its reasoning prefix. There is no cloud LLM anywhere in this backend, period. No evaluation harness, no LLM-as-judge, no synthetic data tooling.
 
 ## Priorities
 
@@ -37,10 +37,14 @@ When you create a new module, update this map.
 ```bash
 cd backend
 uv sync
+ollama pull qwen2.5:7b-instruct              # default detector model
+uv run python -m rag.distortions.seed        # builds the `distortions` Chroma collection
 uv run uvicorn main:app --reload --port 8000
 ```
 
-Ollama must be running with `deepseek-r1:32b` pulled before the detector or persona analyzer paths will work. Ingestion and ChromaDB population can run without Ollama.
+Ollama must be running with the configured model pulled before the detector or persona analyzer paths will work; if the model is missing the SSE stream emits an `event: error` frame with the Ollama 404 message. To swap models, set `OLLAMA_DETECTOR_MODEL` before starting uvicorn (e.g. `OLLAMA_DETECTOR_MODEL=deepseek-r1:32b` for higher-quality but much slower output, or `OLLAMA_DETECTOR_MODEL=llama3.1:8b`). Models smaller than ~7B (e.g. `llama3.2:3b`) tend to produce malformed JSON for this prompt and have all findings dropped — avoid them.
+
+The `distortions` Chroma collection is also a prereq — without it the orchestrator logs `Collection [distortions] does not exist` and proceeds with empty global evidence (findings will be poorly grounded). Re-run the seed command whenever `rag/distortions/seed.py` changes. Ingestion and ChromaDB population themselves can run without Ollama.
 
 ## Conventions
 

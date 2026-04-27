@@ -111,6 +111,17 @@ function dispatchSseFrame(frame: string, handlers: DetectStreamHandlers) {
   if (event === "done") {
     return;
   }
+  if (event === "error") {
+    let message = data;
+    try {
+      const parsed = JSON.parse(data) as { error?: string };
+      if (parsed?.error) message = parsed.error;
+    } catch {
+      // fall back to the raw data string
+    }
+    handlers.onError?.(new Error(message || "detector error"));
+    return;
+  }
   if (!data) return;
   try {
     const parsed = JSON.parse(data) as DistortionFinding;
